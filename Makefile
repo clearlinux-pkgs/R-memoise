@@ -1,4 +1,5 @@
 PKG_NAME := R-memoise
-URL := http://cran.r-project.org/src/contrib/memoise_0.2.1.tar.gz
+URL := http://cran.r-project.org/src/contrib/memoise_1.0.0.tar.gz
+ARCHIVES :=
 
 include ../common/Makefile.common
