@@ -4,16 +4,12 @@
 #
 Name     : R-memoise
 Version  : 1.0.0
-Release  : 24
+Release  : 25
 URL      : http://cran.r-project.org/src/contrib/memoise_1.0.0.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/memoise_1.0.0.tar.gz
 Summary  : Memoisation of Functions
 Group    : Development/Tools
 License  : MIT
-Requires: R-digest
-Requires: R-testthat
-BuildRequires : R-digest
-BuildRequires : R-testthat
 BuildRequires : clr-R-helpers
 
 %description
@@ -28,6 +24,8 @@ BuildRequires : clr-R-helpers
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -36,6 +34,7 @@ mkdir -p %{buildroot}/usr/lib64/R/library
 R CMD INSTALL --install-tests --build  -l %{buildroot}/usr/lib64/R/library memoise
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
+export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost
