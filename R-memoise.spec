@@ -4,7 +4,7 @@
 #
 Name     : R-memoise
 Version  : 1.0.0
-Release  : 27
+Release  : 28
 URL      : http://cran.r-project.org/src/contrib/memoise_1.0.0.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/memoise_1.0.0.tar.gz
 Summary  : Memoisation of Functions
