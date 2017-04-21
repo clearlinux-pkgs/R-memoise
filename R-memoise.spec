@@ -4,7 +4,7 @@
 #
 Name     : R-memoise
 Version  : 1.1.0
-Release  : 35
+Release  : 36
 URL      : https://cran.r-project.org/src/contrib/memoise_1.1.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/memoise_1.1.0.tar.gz
 Summary  : Memoisation of Functions
@@ -24,11 +24,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1492785677
+export SOURCE_DATE_EPOCH=1492801565
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1492785677
+export SOURCE_DATE_EPOCH=1492801565
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -55,6 +55,7 @@ R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/lib
 /usr/lib64/R/library/memoise/INDEX
 /usr/lib64/R/library/memoise/LICENSE
 /usr/lib64/R/library/memoise/Meta/Rd.rds
+/usr/lib64/R/library/memoise/Meta/features.rds
 /usr/lib64/R/library/memoise/Meta/hsearch.rds
 /usr/lib64/R/library/memoise/Meta/links.rds
 /usr/lib64/R/library/memoise/Meta/nsInfo.rds
