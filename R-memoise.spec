@@ -4,7 +4,7 @@
 #
 Name     : R-memoise
 Version  : 1.1.0
-Release  : 70
+Release  : 71
 URL      : https://cran.r-project.org/src/contrib/memoise_1.1.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/memoise_1.1.0.tar.gz
 Summary  : Memoisation of Functions
@@ -13,9 +13,11 @@ License  : MIT
 Requires: R-digest
 BuildRequires : R-digest
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
-again with the same arguments it returns the pre-computed value.
+# memoise
+[![Travis-CI Build Status](https://travis-ci.org/hadley/memoise.svg?branch=master)](https://travis-ci.org/hadley/memoise) [![Coverage Status](https://img.shields.io/codecov/c/github/hadley/memoise/master.svg)](https://codecov.io/github/hadley/memoise?branch=master)
 
 %prep
 %setup -q -c -n memoise
@@ -25,10 +27,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1569291785
+export SOURCE_DATE_EPOCH=1571864752
 
 %install
-export SOURCE_DATE_EPOCH=1569291785
+export SOURCE_DATE_EPOCH=1571864752
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
