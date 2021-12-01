@@ -1,5 +1,7 @@
 # This file contains recursive sources that require this package
 R-RSQLite
+R-conflicted
 R-devtools
+R-downlit
 R-kimisc
 R-pkgdown
